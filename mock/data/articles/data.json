@@ -1,5 +1,13 @@
 [
     {
+        "id": 12,
+        "title": "vue单面应用配置nginx路由",
+        "createdAt": "2024-7-22",
+        "abstract": "vue单面应用中nginx路由配置",
+        "tagId": [5,9],
+        "contentFileName": "vue-spa-nginx-route.md"
+    },
+    {
         "id": 11,
         "title": "处理 Vue Router 中懒加载失败错误",
         "createdAt": "2024-6-16",
