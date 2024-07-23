@@ -1,5 +1,21 @@
 [
     {
+        "id": 14,
+        "title": "使用cerbot获取ssl证书",
+        "createdAt": "2024-7-23",
+        "abstract": "使用cerbot获取Let's Encrypt的ssl证书",
+        "tagId": [8,12],
+        "contentFileName": "certbot.md"
+    },
+    {
+        "id": 13,
+        "title": "更换yum源",
+        "createdAt": "2024-7-23",
+        "abstract": "在centos8中更换yum源",
+        "tagId": [12],
+        "contentFileName": "change-yum-source.md"
+    },
+    {
         "id": 12,
         "title": "vue单面应用配置nginx路由",
         "createdAt": "2024-7-22",
