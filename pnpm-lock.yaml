@@ -11,6 +11,9 @@ dependencies:
   marked:
     specifier: 3.0.8
     version: 3.0.8
+  tocbot:
+    specifier: ^4.28.2
+    version: 4.28.2
 
 devDependencies:
   '@babel/core':
@@ -6784,6 +6787,10 @@ packages:
       regex-not: 1.0.2
       safe-regex: 1.1.0
     dev: true
+
+  /tocbot@4.28.2:
+    resolution: {integrity: sha512-/MaSa9xI6mIo84IxqqliSCtPlH0oy7sLcY9s26qPMyH/2CxtZ2vNAXYlIdEQ7kjAkCQnc0rbLygf//F5c663oQ==}
+    dev: false
 
   /toidentifier@1.0.1:
     resolution: {integrity: sha512-o5sSPKEkg/DIQNmH43V0/uerLrpzVedkUh8tGNvaeXpfpuwjKenlSox/2O/BTlZUtEe+JG7s5YhEz608PlAHRA==}

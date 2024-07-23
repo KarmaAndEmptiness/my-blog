@@ -36,7 +36,8 @@
   },
   "dependencies": {
     "axios": "1.6.8",
-    "marked": "3.0.8"
+    "marked": "3.0.8",
+    "tocbot": "^4.28.2"
   },
   "browserslist": [
     ">= 0.5%",
