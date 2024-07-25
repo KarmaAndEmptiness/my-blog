@@ -7,6 +7,10 @@ const routes = [
         component: () => import('@/views/Articles.vue')
     },
     {
+        path: '/articles',
+        component: () => import('@/views/Articles.vue')
+    },
+    {
         path: '/articles/:id',
         component: () => import('@/views/Article.vue')
     },
@@ -45,12 +49,11 @@ router.afterEach(() => {
     router.app.$root.$emit('hide-loading');
 });
 router.onError((error) => {
-  const pattern = /Loading chunk (\d)+ failed/g;
-  const isChunkLoadFailed = error.message.match(pattern);
-  const targetPath = router.history.pending.fullPath;
-  if (isChunkLoadFailed) {
-    router.replace('/')
-    router.replace(targetPath);
-  }
+    const pattern = /Loading chunk (\d)+ failed/g;
+    const isChunkLoadFailed = error.message.match(pattern);
+    const targetPath = router.history.pending.fullPath;
+    if (isChunkLoadFailed) {
+        router.replace(targetPath);
+    }
 });
 export default router 
