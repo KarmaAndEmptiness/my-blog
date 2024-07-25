@@ -1,7 +1,7 @@
 <template>
-    <div class="d-flex">
-        <div class="content" value="" v-html="htmlContent"></div>
-        <div class="directory">
+    <div class="d-md-flex d-block row">
+        <div class="content col-12 col-md-9" value="" v-html="htmlContent"></div>
+        <div class="directory d-none d-md-block col-md-3">
             <h3 align="center">目录</h3>
             <div class="toc"></div>
         </div>
@@ -44,12 +44,3 @@ export default {
     }
 }
 </script>
-<style>
-.directory {
-    width: 20%;
-}
-
-.content {
-    width: 80%;
-}
-</style>

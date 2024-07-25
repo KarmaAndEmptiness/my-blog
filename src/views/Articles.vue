@@ -4,14 +4,11 @@
     </div>
 </template>
 <script>
-import ArticleList from '../components/ArticleList.vue';
 export default {
     name: 'Articles',
-    components:{
-        ArticleList
-    }
+    components: {
+        ArticleList: () => ({ component: import('@/components/ArticleList.vue') })
+    },
 }
 </script>
-<style lang="scss" scoped>
-
-</style>
+<style lang="scss" scoped></style>

@@ -8,14 +8,14 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 module.exports = function (env, argv) {
     const isDeveplopment = env.development || env.WEBPACK_SERVE;
     return {
-        target:'web',
+        target: 'web',
         mode: isDeveplopment ? 'development' : 'production',
         devtool: isDeveplopment ? 'source-map' : 'none',
         entry: './src/index.js',
         output: {
             filename: 'js/[name].bundle.js',
             path: path.resolve(__dirname, 'dist'),
-            publicPath: env.WEBPACK_SERVE ? '/' : './',
+            publicPath: env.WEBPACK_SERVE ? '/' : '/blog/',
         },
         module: {
             rules: [
@@ -53,13 +53,13 @@ module.exports = function (env, argv) {
                 {
                     test: /\.css$/,
                     use: [
-                        { 
+                        {
                             loader: MiniCssExtractPlugin.loader,
-                            options:{
+                            options: {
                                 esModule: false,
-                                publicPath:env.WEBPACK_SERVE?'/':'../'
+                                publicPath: env.WEBPACK_SERVE ? '/' : '../'
 
-                            } 
+                            }
                         },
                         // 'vue-style-loader',
                         {
@@ -73,15 +73,15 @@ module.exports = function (env, argv) {
                 {
                     test: /\.scss$/,
                     use: [
-                        { 
+                        {
                             loader: MiniCssExtractPlugin.loader,
-                            options:{
-                               esModule: false,
-                                publicPath:env.WEBPACK_SERVE?'/':'../'
+                            options: {
+                                esModule: false,
+                                publicPath: env.WEBPACK_SERVE ? '/' : '../'
 
-                            } 
+                            }
                         },
-                       // 'vue-style-loader',
+                        // 'vue-style-loader',
                         'css-loader',
                         {
                             loader: 'sass-loader',
@@ -130,8 +130,8 @@ module.exports = function (env, argv) {
             }),
             new webpack.HotModuleReplacementPlugin(),
             new MiniCssExtractPlugin({
-                linkType:"text/css",
-                filename:"css/[name].css"
+                linkType: "text/css",
+                filename: "css/[name].css"
             })
         ] : [new HtmlWebpackPlugin({
             template: './public/index.html',
@@ -148,10 +148,10 @@ module.exports = function (env, argv) {
         }),
         new CleanWebpackPlugin(),
         new OptimizeCssAssetsWebpackPlugin(),
-	new MiniCssExtractPlugin({
-                linkType:"text/css",
-                filename:"css/[name].css"
-            })
+        new MiniCssExtractPlugin({
+            linkType: "text/css",
+            filename: "css/[name].css"
+        })
         ],
         devServer: env.WEBPACK_SERVE ? {
             // hot: true,

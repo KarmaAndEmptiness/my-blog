@@ -4,20 +4,10 @@
     </div>
 </template>
 <script>
-import ArticleList from '../components/ArticleList.vue';
 export default {
     name: 'FilterArticles',
-    data() {
-        return {
-        }
-    },
     components: {
-        ArticleList
-    },
-    mounted() {
-    },
-    methods: {
-
+        ArticleList: () => ({ component: import('@/components/ArticleList.vue') })
     }
 }
 </script>
