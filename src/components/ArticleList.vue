@@ -41,9 +41,9 @@ export default {
         }
     },
     props: ['params'],
-    watch:{
-        params(newVal){
-            Object.assign(this.params,newVal)
+    watch: {
+        params(newVal) {
+            Object.assign(this.params, newVal)
             this.getData()
         }
     },
@@ -81,6 +81,11 @@ export default {
 .article {
     li {
         border-bottom: 1px solid #ccc;
+        padding-top: 6rem;
+
+        &:first-child {
+            padding-top: 0;
+        }
 
         .title {
             a {
