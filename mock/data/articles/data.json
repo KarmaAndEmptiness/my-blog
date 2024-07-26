@@ -1,10 +1,23 @@
 [
     {
+        "id": 15,
+        "title": "webpack合并配置文件冲突",
+        "createdAt": "2024-7-26",
+        "abstract": "解决webpack合并配置文件冲突",
+        "tagId": [
+            7
+        ],
+        "contentFileName": "webpack-merge-conflict.md"
+    },
+    {
         "id": 14,
         "title": "使用cerbot获取ssl证书",
         "createdAt": "2024-7-23",
         "abstract": "使用cerbot获取Let's Encrypt的ssl证书",
-        "tagId": [8,12],
+        "tagId": [
+            8,
+            12
+        ],
         "contentFileName": "certbot.md"
     },
     {
@@ -12,7 +25,9 @@
         "title": "更换yum源",
         "createdAt": "2024-7-23",
         "abstract": "在centos8中更换yum源",
-        "tagId": [12],
+        "tagId": [
+            12
+        ],
         "contentFileName": "change-yum-source.md"
     },
     {
@@ -20,7 +35,10 @@
         "title": "vue单面应用配置nginx路由",
         "createdAt": "2024-7-22",
         "abstract": "vue单面应用中nginx路由配置",
-        "tagId": [5,9],
+        "tagId": [
+            5,
+            9
+        ],
         "contentFileName": "vue-spa-nginx-route.md"
     },
     {
@@ -28,7 +46,9 @@
         "title": "处理 Vue Router 中懒加载失败错误",
         "createdAt": "2024-6-16",
         "abstract": "如何优雅地处理Vue Router 中懒加载失败错误",
-        "tagId": [5],
+        "tagId": [
+            5
+        ],
         "contentFileName": "router-load-fail.md"
     },
     {
@@ -36,7 +56,11 @@
         "title": "webpack TypeScript React 项目的目录结构",
         "createdAt": "2024-6-4",
         "abstract": "介绍webpack TypeScript React 项目的目录结构",
-        "tagId": [10,7,11],
+        "tagId": [
+            10,
+            7,
+            11
+        ],
         "contentFileName": "react-ts-webpack-directory-structure.md"
     },
     {
@@ -44,7 +68,11 @@
         "title": "webpack-dev-server https配置 并用nginx反向代理",
         "createdAt": "2024-6-2",
         "abstract": "介绍 webpack-dev-server https配置 并用nginx反向代理",
-        "tagId": [7,8,9],
+        "tagId": [
+            7,
+            8,
+            9
+        ],
         "contentFileName": "webpack-dev-serve-https-nginx.md"
     },
     {
@@ -52,7 +80,10 @@
         "title": "vue router BASE_URL 配置",
         "createdAt": "2024-5-27",
         "abstract": "介绍 在nginx环境下vue router 中的BASE_URL的配置",
-        "tagId": [5,9],
+        "tagId": [
+            5,
+            9
+        ],
         "contentFileName": "vue-router-baseurl.md"
     },
     {
@@ -60,7 +91,9 @@
         "title": "git 撤销远程提交",
         "createdAt": "2024-5-25",
         "abstract": "介绍git如何撤销一个远程提交",
-        "tagId": [6],
+        "tagId": [
+            6
+        ],
         "contentFileName": "git-remote-revert.md"
     },
     {
@@ -68,7 +101,9 @@
         "title": "cdn加载白屏 引入加载动画",
         "createdAt": "2024-5-25",
         "abstract": "通过cdn引入的第三方库加载时间较长导致白屏，引入加载动画提升用户体验",
-        "tagId": [5],
+        "tagId": [
+            5
+        ],
         "contentFileName": "cdn-loading.md"
     },
     {
@@ -76,7 +111,9 @@
         "title": "vue-router 懒加载加入加载动画",
         "createdAt": "2024-5-25",
         "abstract": "通过使用Vue 的全局事件总线来实现加入加载动画",
-        "tagId": [5],
+        "tagId": [
+            5
+        ],
         "contentFileName": "vue-lazy-router-loading.md"
     },
     {
@@ -84,7 +121,9 @@
         "title": "码点是什么",
         "createdAt": "2024-5-19",
         "abstract": "介绍一下码点是什么",
-        "tagId": [4],
+        "tagId": [
+            4
+        ],
         "contentFileName": "codepoint.md"
     },
     {
@@ -92,7 +131,9 @@
         "title": "原码、反码、补码以及浮点数存储方式",
         "createdAt": "2024-5-15",
         "abstract": "介绍一下原码、反码、补码以及浮点数的存储方式",
-        "tagId": [1],
+        "tagId": [
+            1
+        ],
         "contentFileName": "encode.md"
     },
     {
@@ -100,7 +141,9 @@
         "title": "ssh免密登录",
         "createdAt": "2024-5-4",
         "abstract": "关于ssh的免密登录",
-        "tagId": [2],
+        "tagId": [
+            2
+        ],
         "contentFileName": "ssh-authorized.md"
     },
     {
@@ -108,7 +151,9 @@
         "title": "源码编译安装gcc",
         "createdAt": "2024-5-4",
         "abstract": "用编译源码的方式安装gcc",
-        "tagId": [3],
+        "tagId": [
+            3
+        ],
         "contentFileName": "gcc-linux.md"
     }
 ]
