@@ -37,7 +37,7 @@
 6. **配置环境变量：**
     - 在 `~/.bashrc` 中配置环境变量
     ```sh
-    export PATH=PATH:<you_prefix>/bin
+    export PATH=$PATH:<you_prefix>/bin
     ```
 7. **验证安装：**
    - 检查 GCC 版本以确保安装成功。
@@ -71,7 +71,7 @@ make -j$(nproc)
 sudo make install
 
 # 7. 在~/.bashrc配置环境变量
-export PATH=PATH:<you_prefix>/bin
+export PATH=$PATH:<you_prefix>/bin
 
 # 8. 验证安装
 gcc --version
