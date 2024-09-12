@@ -117,7 +117,7 @@ module.exports = function (env, argv) {
         resolve: {
             alias: {
                 '@': path.resolve(__dirname, 'src'),
-                'vue$': path.resolve(__dirname, 'src/assets/js/vue2.js')
+                // 'vue$': path.resolve(__dirname, 'src/assets/js/vue2.js')
             },
         },
         plugins: isDeveplopment ? [
@@ -125,8 +125,8 @@ module.exports = function (env, argv) {
                 template: './public/index.html',
                 favicon: './public/favicon.ico',
                 inject: true,
-                scriptLoading: 'blocking',
-                vueVersion: 'https://cdn.bootcdn.net/ajax/libs/vue/2.7.16/vue.js'
+                // scriptLoading: 'blocking',
+                // vueVersion: 'https://cdn.bootcdn.net/ajax/libs/vue/2.7.16/vue.js'
             }),
             new webpack.HotModuleReplacementPlugin(),
             new MiniCssExtractPlugin({
@@ -137,8 +137,8 @@ module.exports = function (env, argv) {
             template: './public/index.html',
             favicon: './public/favicon.ico',
             inject: true,
-            scriptLoading: 'blocking',
-            vueVersion: 'https://cdn.bootcdn.net/ajax/libs/vue/2.7.16/vue.min.js',
+            // scriptLoading: 'blocking',
+            // vueVersion: 'https://cdn.bootcdn.net/ajax/libs/vue/2.7.16/vue.min.js',
             minify: {
                 removeComments: true,
                 collapseWhitespace: true,
@@ -178,10 +178,6 @@ module.exports = function (env, argv) {
             ],
         },
         externals: {
-            vue: 'Vue',
-            'vue-router': 'VueRouter',
-            'highlight.js': 'hljs',
-            vuex: 'Vuex',
             'mock.js': 'mock'
         }
     }

@@ -1,10 +1,12 @@
-import {Store} from 'vuex'
+import Vuex from 'vuex'
+import Vue from 'vue'
 import article from './modules/article'
 import tag from './modules/tag'
 import archive from './modules/archive'
 import common from './modules/common'
-export default new Store({
-    modules:{
+Vue.use(Vuex);
+export default new Vuex.Store({
+    modules: {
         article,
         tag,
         archive,

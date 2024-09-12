@@ -1,4 +1,6 @@
 import Vue from 'vue'
+import Vuex from 'vuex'
+import VueRouter from 'vue-router'
 import App from './App.vue'
 import './styles/common.scss'
 import router from '@/router'
@@ -13,24 +15,26 @@ import '@/assets/js/bootstrap.js'
 const renderer = new marked.Renderer();
 
 // 重写code的渲染方法
-renderer.code=function(code,language){
-   // 指定代码语言
-   const validLanguage = hljs.getLanguage(language) ? language : 'plaintext';
-   // 返回带有hljs类的代码块
-   return `<pre><code class="hljs ${validLanguage}">${hljs.highlight(code, { language: validLanguage, ignoreIllegals: true }).value}</code></pre>`;
+renderer.code = function (code, language) {
+  // 指定代码语言
+  const validLanguage = hljs.getLanguage(language) ? language : 'plaintext';
+  // 返回带有hljs类的代码块
+  return `<pre><code class="hljs ${validLanguage}">${hljs.highlight(code, { language: validLanguage, ignoreIllegals: true }).value}</code></pre>`;
 }
 // 设置marked使用highlight.js
 marked.setOptions({
-  renderer:renderer,
-    highlight: function(code) {
-      return hljs.highlightAuto(code).value
-    }
-  });
-Vue.prototype.$marked=marked
-Vue.use(VueRouter);
-new Vue({ render: h => h(App), router,store,mounted(){
-  const loader=document.getElementById('loader');
-  if(loader){
-   loader.parentNode.removeChild(loader); 
+  renderer: renderer,
+  highlight: function (code) {
+    return hljs.highlightAuto(code).value
   }
-}}).$mount('#root');
+});
+Vue.prototype.$marked = marked
+Vue.use(VueRouter);
+new Vue({
+  render: h => h(App), router, store, mounted() {
+    const loader = document.getElementById('loader');
+    if (loader) {
+      loader.parentNode.removeChild(loader);
+    }
+  }
+}).$mount('#root');
