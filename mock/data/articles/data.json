@@ -1,5 +1,15 @@
 [
     {
+        "id": 19,
+        "title": "c++中arguments和parameters的区别",
+        "createdAt": "2024-10-18",
+        "abstract": "c++中arguments和parameters的区别",
+        "tagId": [
+            13
+        ],
+        "contentFileName": "c++_arguments_parameters.md"
+    },
+    {
         "id": 18,
         "title": "c++做web后端",
         "createdAt": "2024-10-16",
