@@ -1,5 +1,15 @@
 [
     {
+        "id": 20,
+        "title": "配置webpack开发服务器以支持SPA路由",
+        "createdAt": "2024-10-23",
+        "abstract": "配置webpack开发服务器以支持SPA路由",
+        "tagId": [
+            7
+        ],
+        "contentFileName": "webpack_spa.md"
+    },
+    {
         "id": 19,
         "title": "c++中arguments和parameters的区别",
         "createdAt": "2024-10-18",
