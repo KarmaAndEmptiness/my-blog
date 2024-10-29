@@ -177,8 +177,6 @@ module.exports = function (env, argv) {
                 }),
             ],
         },
-        externals: {
-            'mock.js': 'mock'
-        }
+
     }
 }
