@@ -1,5 +1,16 @@
 [
     {
+        "id": 23,
+        "title": "win10 mysql配置",
+        "createdAt": "2024-12-11",
+        "abstract": "win10 mysql配置",
+        "tagId": [
+            14,
+            15
+        ],
+        "contentFileName": "mysql-zip-config.md"
+    },
+    {
         "id": 22,
         "title": "win10内置VPN配置",
         "createdAt": "2024-11-9",
