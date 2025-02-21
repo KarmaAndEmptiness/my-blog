@@ -9,13 +9,23 @@
 
                 <!-- nav -->
                 <ul class="nav-container mt-4 row">
-                    <li v-for="item in navLi" :key="item.id" class=" mb-2" @click="navChange(item)">
+                    <li v-for="item in navLi" :key="item.id" class="mb-2" @click="handleNavClick(item)">
                         <router-link
+                            v-if="!item.external"
                             :class="`d-flex align-items-center pt-2 pb-2 justify-content-center ${item.active ? 'nav-active' : ''}`"
                             :to="item.path">
                             <i :class="`bi ${item.icon}`"></i>
                             <span style="padding-left:1.5rem;">{{ item.text }}</span>
                         </router-link>
+                        <a 
+                            v-else
+                            :href="item.path"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            :class="`d-flex align-items-center pt-2 pb-2 justify-content-center`">
+                            <i :class="`bi ${item.icon}`"></i>
+                            <span style="padding-left:1.5rem;">{{ item.text }}</span>
+                        </a>
                     </li>
                 </ul>
             </div>
@@ -35,13 +45,23 @@
 
                 <!-- nav -->
                 <ul class="nav-container mt-4 row">
-                    <li v-for="item in navLi" :key="item.id" class=" mb-2" @click="navChange(item)">
+                    <li v-for="item in navLi" :key="item.id" class="mb-2" @click="handleNavClick(item)">
                         <router-link
+                            v-if="!item.external"
                             :class="`d-flex align-items-center pt-2 pb-2 justify-content-center ${item.active ? 'nav-active' : ''}`"
                             :to="item.path">
                             <i :class="`bi ${item.icon}`"></i>
                             <span style="padding-left:1.5rem;">{{ item.text }}</span>
                         </router-link>
+                        <a 
+                            v-else
+                            :href="item.path"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            :class="`d-flex align-items-center pt-2 pb-2 justify-content-center`">
+                            <i :class="`bi ${item.icon}`"></i>
+                            <span style="padding-left:1.5rem;">{{ item.text }}</span>
+                        </a>
                     </li>
                 </ul>
             </div>
@@ -59,9 +79,18 @@ export default {
             navLi: [
                 { id: 1, text: '首页', icon: 'bi-house-door', path: '/', active: true },
                 { id: 2, text: '归档', icon: 'bi-folder', path: '/archive', active: false },
-                { id: 3, text: '标签', icon: 'bi-tags', path: '/tags', active: false },
+                { id: 3, text: '标签', icon: 'bi-tags', path: '/tags', active: false},
                 { id: 4, text: '关于', icon: 'bi-info-circle', path: '/about', active: false },
-                { id: 5, text: '友链', icon: 'bi-link-45deg', path: '/links', active: false }]
+                { id: 5, text: '友链', icon: 'bi-link-45deg', path: '/links', active: false },
+                { 
+                    id: 6, 
+                    text: '智慧餐饮管理系统', 
+                    icon: 'bi-shop', 
+                    path: 'http://holaworld.ggff.net/restaurant', 
+                    active: false,
+                    external: true 
+                },
+            ]
 
         }
     },
@@ -92,6 +121,14 @@ export default {
         close(e) {
             this.isShow = false
             this.$store.commit('toggle', false)
+        },
+        handleNavClick(item) {
+            if (!item.external) {
+                this.navChange(item);
+            }
+            if (this.isShow) {
+                this.close();
+            }
         }
     },
     mounted() {
