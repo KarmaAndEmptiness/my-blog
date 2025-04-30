@@ -82,11 +82,12 @@ export default {
                 { id: 3, text: '标签', icon: 'bi-tags', path: '/tags', active: false},
                 { id: 4, text: '关于', icon: 'bi-info-circle', path: '/about', active: false },
                 { id: 5, text: '友链', icon: 'bi-link-45deg', path: '/links', active: false },
+                { id: 6, text: 'drogon文档', icon: 'bi-folder', path: 'http://homeless.run.place/drogon-docs', active: false,external: true },
                 { 
-                    id: 6, 
+                    id: 7, 
                     text: '智慧餐饮管理系统', 
                     icon: 'bi-shop', 
-                    path: 'http://holaworld.ggff.net/restaurant', 
+                    path: 'http://homeless.run.place/restaurant', 
                     active: false,
                     external: true 
                 },
